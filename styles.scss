@@ -1,0 +1,114 @@
+$custom-white: #F2F2F2;
+$custom-blue: #3AAFA9;
+$custom-black: #182628;
+$custom-yellow: #FBAF00;
+
+* {
+  font-family: Helvetica;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Righteous', cursive;
+  color: white;
+  text-align: center;
+
+  // overflow: hidden;
+}
+
+html {
+  background-color: $custom-blue;
+}
+
+header {
+  width: min(1200px, 100vw);
+  margin: auto;
+  height: 10vh;
+  color: $custom-white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid $custom-yellow;
+  h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-size: 120px;
+  line-height: 130px;
+  &:nth-of-type(1){
+    margin-top: 40px;
+  }
+}
+
+p {
+  font-size: 20px;
+  
+  }
+
+.start-game {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 20px 40px;
+  background-color: rgb(10, 80, 150);
+  border: 5px solid white;
+  z-index: 2;
+}
+.score-box {
+  position: absolute;
+  padding: 5px 20px;
+  background-color: rgb(10, 80, 150);
+  bottom: 0;
+  left: 0;
+  border-top: 5px solid white;
+  border-right: 5px solid white;
+  z-index: 2;
+}
+.lives-box {
+  position: absolute;
+  padding: 5px 20px;
+  background-color: rgb(10, 80, 150);
+  bottom: 0;
+  right: 0;
+  border-top: 5px solid white;
+  border-left: 5px solid white;
+  z-index: 2;
+}
+
+.game-container {
+  box-sizing: content-box;
+  position: relative;
+  border: 5px solid white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  width: 800px;
+  height: 600px;
+  margin: 20px auto;
+  background: url(./assets/virus-background.png);
+  background-size: cover;
+}
+
+.player {
+  background: blue;
+  height: 60px;
+  width: 100px;
+  position: absolute;
+  transition: ease 0.1s;
+}
+
+.alien {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  background-size: cover;
+}
+
+.laser {
+  height: 20px;
+  width: 6px;
+  position: absolute;
+  transition: ease 0.1s;
+}
